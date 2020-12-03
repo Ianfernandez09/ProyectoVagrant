@@ -12,7 +12,7 @@ Vagrant.configure("2") do |config|
 
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
-  config.vm.box = "debian/64"
+  config.vm.box = "debian/buster64"
   config.vm.provision :shell,path:"instala_todo.sh"
   config.vm.network :forwarded_port, host:1234, guest: 80
   config.vm.network "public_network", :bridged=>"ens33"
